@@ -7,10 +7,12 @@ public class Album {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(unique = true)
+    @Column(name = "Nome do album")
+    private String nome;
+    @Column(name = "Capa")
 
     private String capa;
-    @Column(unique = true)
+    @Column(name = "Musica Titutlo")
 
     private String musicaTitulo;
 
@@ -20,6 +22,14 @@ public class Album {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getCapa() {
